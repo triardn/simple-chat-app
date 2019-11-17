@@ -1,9 +1,8 @@
 package cmd
 
 import (
-	"net/http"
-
 	"github.com/triardn/simple-chat-app/handler"
+	"net/http"
 )
 
 func SetupRoutes() {

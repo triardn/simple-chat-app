@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-
 	"github.com/triardn/simple-chat-app/cmd"
+	"net/http"
 )
 
 func main() {
