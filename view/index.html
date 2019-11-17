@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WebSocket</title>
+    <title>Simple Chat App</title>
 
     <style type="text/css">
         .form {
@@ -47,10 +47,10 @@
     <div class="form">
         <form onsubmit="app.doSendMessage(); return false;">
             <div class="placeholder">
-                <label>Hello! Say something:</label>
+                <label>Hai! Ayo mulai chat:</label>
             </div>
-            <input class="input-message" type="text" placeholder="Enter message">
-            <button type="submit">Send</button>
+            <input class="input-message" type="text" placeholder="Masukan pesan">
+            <button type="submit">Kirim</button>
         </form>
     </div>
 
@@ -73,18 +73,10 @@
         }
         app.init = function () {
             app.container = document.querySelector('.container')
-            app.ws = new WebSocket("ws://localhost:8080/websocket")
-            app.ws.onopen = function() {
-                var message = '<b>connected</b>'
-                app.print(message)
-            }
+            app.ws = new WebSocket("ws://localhost:1234/websocket")
             app.ws.onmessage = function (event) {
                 var res = JSON.parse(event.data)
                 app.print(res.Message)
-            }
-            app.ws.onclose = function () {
-                var message = '<b>disconnected</b>'
-                app.print(message)
             }
         }
         window.onload = app.init
