@@ -1,6 +1,6 @@
 # Simple Chat App
 
-Simple chat app using `[gorilla/websocket](https://github.com/gorilla/websocket)`
+Simple chat app using [gorilla/websocket](https://github.com/gorilla/websocket)
 
 ## Installation
 
